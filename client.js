@@ -44,17 +44,22 @@ function drawDot(dot, i, dots) {
   ctx.fillStyle = 'white';
   ctx.strokeStyle = 'teal';
 
-  Object.keys(dots).forEach(function(tag) {
-    if(tag === me.tag) { return; }
+  dots.forEach(function(d) {
+    if(dot === d) { return; }
 
-    var d = dots[tag];
+    var dist = Math.sqrt(Math.pow(d.x-dot.x, 2) + Math.pow(d.y-dot.y, 2))
 
-    if(Math.sqrt(Math.pow(d.x-dot.x, 2) + Math.pow(d.y-dot.y, 2)) < 100) {
+    if(dist < 100) {
       ctx.beginPath();
       ctx.moveTo(dot.x, dot.y);
       ctx.lineTo(d.x, d.y);
       ctx.closePath();
       ctx.stroke();
+
+      if(dot === me) {
+        DX = DX - ((me.x - d.x)/dist)*0.5;
+        DY = DY - ((me.y - d.y)/dist)*0.5;
+      }
     }
   });
 

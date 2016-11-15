@@ -21,7 +21,7 @@ function random2(l, u) {
   return l + Math.random()*(u-l);
 }
 
-for (var i = 0; i < 500; i++) {
+for (var i = 0; i < 1000; i++) {
   dots.push({tag: i, x: random2(0, CANVAS_X), y: random2(0, CANVAS_Y)});
 }
 
