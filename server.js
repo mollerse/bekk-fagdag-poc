@@ -21,8 +21,8 @@ function random2(l, u) {
   return l + Math.random()*(u-l);
 }
 
-for (var i = 0; i < 1000; i++) {
-  dots.push({tag: i, x: random2(0, CANVAS_X), y: random2(0, CANVAS_Y)});
+for (var i = 0; i < 250; i++) {
+  dots.push({tag: i, x: random2(10, CANVAS_X-10), y: random2(10, CANVAS_Y-10), moving: false});
 }
 
 io.on('connection', function(socket) {
