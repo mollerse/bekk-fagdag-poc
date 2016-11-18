@@ -107,7 +107,8 @@ function draw() {
     ctx.fillStyle = 'black';
     ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
-    Object.entries(dots)
+    Object.keys(dots)
+      .map(k => [k, dots[k]])
       .filter(function([tag, dot]) {
         return dot.x < (me.x + 0.5 * WINDOW_W)
         && dot.x > (me.x - 0.5 * WINDOW_W)
