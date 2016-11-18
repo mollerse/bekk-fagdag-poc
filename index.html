@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, height=device-height">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
     <title>BEKK Open Fagdag</title>
     <style media="screen">
       body {
@@ -33,33 +33,60 @@
         margin: 0;
         padding: 0;
       }
-      .a {
+
+      .a, .b, .c, .d {
         position: absolute;
-        top: 30px;
-        left: 30px;
+      }
+
+      .a, .b {
+        top: 2.5vh;
+      }
+
+      .a {
+        left: 2.5vw;
+      }
+
+      .b {
+        right: 2.5vw;
+      }
+
+      .c, .d {
+        bottom: 2.5vh;
+      }
+
+      .c {
+        left: 2.5vw;
+      }
+
+      .d {
+        right: 2.5vw;
       }
 
       .a h1, .a p {
         float: left;
-        margin-right: 60px;
+        margin-right: 2.5vw;
       }
 
-      .b {
-        position: absolute;
-        top: 30px;
-        right: 30px;
-      }
+      @media (max-width: 600px) {
+        .a {
+          top: 2.5vh;
+          left: 2.5vw;
+        }
 
-      .c {
-        position: absolute;
-        bottom: 30px;
-        left: 30px;
-      }
+        .b {
+          top: 7.5vh;
+          left: 2.5vw;
+        }
 
-      .d {
-        position: absolute;
-        bottom: 30px;
-        right: 30px;
+        .c {
+          bottom: 10vh;
+          left: 2.5vw;
+        }
+
+        .d {
+          bottom: 2.5vh;
+          left: 2.5vw;
+        }
       }
     </style>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
