@@ -5,8 +5,8 @@ var fs = require('fs');
 
 var dots = [];
 
-var CANVAS_X = 3000;
-var CANVAS_Y = 3000;
+var CANVAS_X = 6000;
+var CANVAS_Y = 6000;
 
 app.get('/', function(req, res){
   fs.createReadStream('index.html').pipe(res);
