@@ -15,7 +15,7 @@ app.get('/bundle.js', function(req, res){
   fs.createReadStream('bundle.js').pipe(res);
 });
 
-http.listen(3000);
+http.listen(process.env.PORT || 3000);
 
 function random2(l, u) {
   return l + Math.random()*(u-l);
